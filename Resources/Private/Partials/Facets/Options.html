@@ -7,10 +7,10 @@
 	<f:variable name="facetOptionLimit">{f:if(condition: '{settings.faceting.limit}', then: '{settings.faceting.limit}', else: 10)}</f:variable>
 
 	<div class="card">
-		<div class="card-header facet-label">
+		<h2 class="card-header facet-label">
 				<span class="bi bi-filter"></span>
-				<a href="#facet{facet.name}">{facet.label}</a>
-		</div>
+				<a href="#facet{facet.name}">{facet.label}Ich bin die Überschrift</a>
+		</h2>
 		<ul class="list-group list-group-flush facet-option-list facet-type-options fluidfacet collapse show" data-facet-name="{facet.name}" data-facet-label="{facet.label}" id="facet{facet.name}">
 			<f:for each="{facet.options}" as="option" iteration="iteration">
 				<li class="list-group-item facet-option {f:if(condition:'!({iteration.index} < {facetOptionLimit})', then:' tx-solr-facet-hidden')}" data-facet-item-value="{option.value}">
